@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMWEB Tugas 3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card center w-50" id="form-add">
+            <div class="card-header bg-info">
+
+
+                <h5 class="card-title text-white">Input Data</h5>
+                <div class="card-widget">
+                    <a href="#" onclick="hide();">X</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3 mr-30">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama">
+                    </div>
+
+                    <div class="mb-3 mr-30">
+                        <label for="nama" class="form-label">NIM</label>
+                        <input type="text" class="form-control" id="nim" placeholder="Masukkan NIM">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Program Studi</label>
+                        <select class="form-control" id="prodi">
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Teknik Elektro">Teknik Elektro</option>
+                            <option value="Teknik Mesin">Teknik Mesin</option>
+                            <option value="Teknik Biomedis">Teknik Biomedis</option>
+                            <option value="Farmasi">Farmasi </option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="addData();">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="card center w-50" id="form-edit">
+            <div class="card-header bg-info">
+
+
+                <h5 class="card-title text-white">Edit Data</h5>
+                <div class="card-widget">
+                    <a href="#" onclick="hide();">X</a>
+                </div>
+            </div>
+            <div class="card-body">
+                <form>
+                    <input type="hidden" id="no">
+                    <div class="mb-3 mr-30">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="editnama" placeholder="Masukkan Nama">
+                    </div>
+
+                    <div class="mb-3 mr-30">
+                        <label for="nama" class="form-label">NIM</label>
+                        <input type="text" class="form-control" id="editnim" placeholder="Masukkan NIM">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Program Studi</label>
+                        <select class="form-control" id="editprodi">
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Teknik Elektro">Teknik Elektro</option>
+                            <option value="Teknik Mesin">Teknik Mesin</option>
+                            <option value="Teknik Biomedis">Teknik Biomedis</option>
+                            <option value="Farmasi">Farmasi </option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="editDataSubmit();">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead id="data-head">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">NIM</th>
+                            <th scope="col">Program Studi</th>
+                            <th scope="col">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>
